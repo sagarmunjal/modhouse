@@ -84,7 +84,21 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: calc(100vh - 5px); }
+  height: calc(100vh - 5px);
+  color: #685943; }
+
+.header h2, h1 {
+  font-family: "GATSBYFLF-BOLD";
+  position: relative;
+  text-align: right;
+  top: 70%;
+  right: 5%; }
+
+.header button {
+  border: 1px solid white;
+  position: absolute;
+  top: 90%;
+  right: 5%; }
 
 nav h1 {
   color: #8a7559;
