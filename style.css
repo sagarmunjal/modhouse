@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'GATSBYFLF-BOLD';
-  src: url("./resources/GATSBYFLF-BOLD.TTF") format("TTF"); }
+  src: url("./resources/gatsby/gatsbyflf-bold-webfont.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("./resources/gatsby/gatsbyflf-bold-webfont.woff2") format("woff2"), url("./resources/gatsby/gatsbyflf-bold-webfont.woff") format("woff"); }
 @font-face {
   font-family: 'AVENIRLTSTD-BOOK';
   src: url("./resources/AVENIRLTSTD-BOOK.OTF") format("OTF"); }
@@ -84,7 +86,7 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: calc(100vh - 5px);
+  height: calc(100vh);
   color: #685943; }
 
 .header h2, h1 {
@@ -97,7 +99,7 @@ main {
 .header button {
   border: 1px solid white;
   position: absolute;
-  top: 90%;
+  bottom: 0;
   right: 5%; }
 
 nav h1 {
