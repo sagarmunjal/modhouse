@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="./flickity.css" media="screen">
         <link rel="stylesheet" href="./style.css">
-       
-
     </head>
     <body>
         <div class="grid">
@@ -21,17 +20,20 @@
                 <button id="menu">X</button>
                 <main>
                     <div class="header">
-                        <h2>Introducing</h2>
-                        <h1>the Seraglio collection</h1>
-                        <button>Explore</button>
+                        <div class="header-content">
+                                <h2>Introducing</h2>
+                                <h1>the Seraglio collection</h1>
+                                <button>Explore</button>
+                        </div>
                     </div>
                     <div class="slider">
-                        <ul>
-                            <li><img src="./resources/assets/kitchen.jpg" alt=""></li>
-                            <li><img src="./resources/assets/bar.jpg" alt=""></li>
-                            <li><img src="./resources/assets/study.jpg" alt=""></li>
-                            <li><img src="./resources/assets/living-room.jpg" alt=""></li>
-                        </ul>
+                            <!-- Flickity HTML init -->
+                            <div class="carousel" data-flickity='{ "pageDots": false, "freeScroll": true, "wrapAround": true, "imagesLoaded": true }'>
+                              <img src="./resources/assets/kitchen.jpg" alt="orange tree" />
+                              <img src="./resources/assets/bar.jpg" alt="submerged" />
+                              <img src="./resources/assets/study.jpg" alt="look-out" />
+                              <img src="./resources/assets/living-room.jpg" alt="One World Trade" />
+                            </div>
                     </div>
                     <div class="item1">
                         <h3>Chalet Design</h3>
@@ -57,7 +59,7 @@
                     </div>
                 </main>
         </div>
-            
+            <script src="./flickity.pkgd.min.js"></script>
             <script src="./script.js"></script>
     </body>
 </html>

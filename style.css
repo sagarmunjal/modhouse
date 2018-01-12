@@ -1,3 +1,25 @@
+p {
+  padding: 20px;
+  line-height: 20px; }
+
+/* external css: flickity.css */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif; }
+
+/* force scrollbar, not necessary, but may reduce gaps. Setting a max-height on .carousel also works */
+html {
+  overflow-y: scroll; }
+
+.carousel {
+  background: #EEE; }
+
+.carousel img {
+  display: block;
+  height: 400px; }
+
 @font-face {
   font-family: 'GATSBYFLF-BOLD';
   src: url("./resources/gatsby/gatsbyflf-bold-webfont.ttf") format("truetype");
@@ -5,7 +27,8 @@
   src: url("./resources/gatsby/gatsbyflf-bold-webfont.woff2") format("woff2"), url("./resources/gatsby/gatsbyflf-bold-webfont.woff") format("woff"); }
 @font-face {
   font-family: 'AVENIRLTSTD-BOOK';
-  src: url("./resources/AVENIRLTSTD-BOOK.OTF") format("OTF"); }
+  src: url("./resources/AVENIRLTSTD-BOOK.OTF") format("OTF");
+  src: url("./resources/AVENIRLTSTD-ROMAN/AvenirLTStd-Roman.ttf") format("truetype"), url("./resources/AVENIRLTSTD-ROMAN/AvenirLTStd-Roman.eot") format("eot"), url("./resources/AVENIRLTSTD-ROMAN/AvenirLTStd-Roman.woff") format("woff"), url("./resources/AVENIRLTSTD-ROMAN/AvenirLTStd-Roman.woff2") format("woff2"); }
 *,
 *:before,
 *:after {
@@ -17,29 +40,23 @@ html, body {
   height: 100%;
   width: 100%; }
 
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+
 h3 {
-  padding: 13px;
-  font-family: "GATSBYFLF-BOLD";
-  font-size: 1.5em; }
+  font-family: "GATSBYFLF-BOLD"; }
 
 h4 {
   font-family: "AVENIRLTSTD-BOOK"; }
 
 p {
-  padding: 15px;
-  font-family: "AVENIRLTSTD-BOOK";
-  font-size: 0.9em; }
+  font-family: "AVENIRLTSTD-BOOK"; }
 
 ul {
   list-style: none; }
 
 button {
-  display: block;
-  border: 0.1px solid #989393;
-  padding: 10px;
-  font-family: "Lato";
-  font-weight: 400;
-  margin: 0 auto; }
+  font-family: "Lato"; }
 
 button:hover {
   cursor: pointer; }
@@ -89,44 +106,56 @@ main {
   height: calc(100vh);
   color: #685943; }
 
+.header-content {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  margin-right: 5em; }
+
 .header h2, h1 {
   font-family: "GATSBYFLF-BOLD";
-  position: relative;
-  text-align: right;
-  top: 70%;
-  right: 5%; }
+  letter-spacing: 2px; }
 
 .header button {
+  color: white;
+  letter-spacing: 5px;
   border: 1px solid white;
-  position: absolute;
-  bottom: 0;
-  right: 5%; }
+  padding: 5px 10px 5px 10px;
+  margin: 5px; }
+
+nav h1 {
+  top: 0; }
 
 nav h1 {
   color: #8a7559;
   text-align: center; }
 
+.slider {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
 img {
   display: block;
   margin: 0 auto;
-  min-width: 100%;
+  min-width: 90%;
   width: 90vw;
   margin-right: auto;
-  margin-left: 0; }
+  margin-left: auto; }
+
+.item1 {
+  margin: 0 10% 10% 10%; }
 
 .item1 h3 {
   text-align: right;
   color: #8c8885; }
 
 .item1 p {
-  line-height: 16px;
-  letter-spacing: 0.020em;
-  font-size: 0.7em;
-  font-weight: 100;
+  font-family: "AVENIRLTSTD-BOOK";
   color: #8a7559; }
 
 .item2 {
   background-color: #1d1d27;
+  margin: 0 0 0 10%;
   padding: 10%; }
 
 .item2 h3 {
@@ -135,10 +164,7 @@ img {
 
 .item2 p {
   color: #8c8885;
-  text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 1.6em;
-  padding: 5% 15%; }
+  text-align: center; }
 
 .footer {
   padding: 10%;
