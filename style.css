@@ -2,24 +2,6 @@ p {
   padding: 20px;
   line-height: 20px; }
 
-/* external css: flickity.css */
-* {
-  box-sizing: border-box; }
-
-body {
-  font-family: sans-serif; }
-
-/* force scrollbar, not necessary, but may reduce gaps. Setting a max-height on .carousel also works */
-html {
-  overflow-y: scroll; }
-
-.carousel {
-  background: #EEE; }
-
-.carousel img {
-  display: block;
-  height: 400px; }
-
 @font-face {
   font-family: 'GATSBYFLF-BOLD';
   src: url("./resources/gatsby/gatsbyflf-bold-webfont.ttf") format("truetype");
@@ -40,9 +22,6 @@ html, body {
   height: 100%;
   width: 100%; }
 
-body {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
-
 h3 {
   font-family: "GATSBYFLF-BOLD"; }
 
@@ -60,6 +39,9 @@ button {
 
 button:hover {
   cursor: pointer; }
+
+.object-fit_cover {
+  object-fit: contain; }
 
 nav {
   width: 300px;
@@ -79,7 +61,6 @@ main {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr;
-  grid-auto-rows: minmax(150px, auto);
   grid-template-areas: "header" "slider" "item1" "item2" "footer"; }
 
 .header {
@@ -103,7 +84,7 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: calc(100vh);
+  height: calc(110vh);
   color: #685943; }
 
 .header-content {
@@ -116,7 +97,7 @@ main {
   font-family: "GATSBYFLF-BOLD";
   letter-spacing: 2px; }
 
-.header button {
+.header-content button {
   color: white;
   letter-spacing: 5px;
   border: 1px solid white;
@@ -134,8 +115,7 @@ nav h1 {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-img {
-  display: block;
+.item1 img {
   margin: 0 auto;
   min-width: 90%;
   width: 90vw;
@@ -184,5 +164,31 @@ img {
 
 .footer p {
   display: none; }
+
+body {
+  font-size: 16px; }
+
+p {
+  font-size: 120%;
+  line-height: 1.2; }
+
+h4 {
+  font-size: 150%; }
+
+h3 {
+  font-size: 180%; }
+
+h2 {
+  font-size: 210%; }
+
+h1 {
+  font-size: 240%; }
+
+html {
+  font-size: 110%; }
+
+@media (min-width: 60em) {
+  html {
+    font-size: 90%; } }
 
 /*# sourceMappingURL=style.css.map */
